@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>Anidaku - Best Anime App for Android and iOS</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="robots" content="index,follow" />
+    <meta http-equiv="content-language" content="en" />
+    <meta name="description"
+        content="Download Anidaku - Watch Anime Free APK for Android and IOS today. This app, filled with subbed and dubbed shows, offers a great anime viewing experience." />
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+    <!-- FAVICON: using provided image URL -->
+    <link rel="icon" href="https://iili.io/BBV8VMQ.jpg" type="image/jpeg">
+    <link rel="shortcut icon" href="https://iili.io/BBV8VMQ.jpg" type="image/jpeg">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body {
+            background: #1A1D24;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 16px;
+            line-height: 1.5;
+            font-weight: 400;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+            -webkit-text-size-adjust: none;
+        }
+        h1, h2, h3, h4, h5, h6 { font-weight: 600; }
+        a { color: #fff; text-decoration: none !important; transition: all 0.3s ease; }
+        a:hover { color: #7C3AED; }
+        p { line-height: 1.6; margin-bottom: 1rem; }
+        .highlight { color: #7C3AED; }
+        strong { font-weight: 700; }
+        .container { width: 1300px; max-width: 100%; padding: 0 20px; margin: 0 auto; }
+        .btn { border-radius: 5px; border: none; font-weight: 600; transition: all 0.3s ease; box-shadow: none !important; }
+        .btn-pre { background: #7C3AED; color: #fff !important; }
+        .btn-pre:hover { background: #6d28d9; transform: translateY(-2px); }
+        .btn-lg { font-size: 16px; padding: 0.85rem 2rem; }
+        .btn-radius { border-radius: 80px; }
+        .item-flex { display: flex; align-items: center; gap: 0.75rem; }
+        .item-flex.center { justify-content: center; }
+        .size-20 { font-size: 20px; }
+        .heading-2x { font-size: 2.4em; font-weight: 700; line-height: 1.3; margin-bottom: 2rem; }
+        .text-white { color: #fff; }
+        .text-center { text-align: center; }
+        #header { position: relative; height: 100px; display: flex; justify-content: space-between; align-items: center; }
+        #logo img { height: 50px; }
+        #menu .top-menu { list-style: none; display: flex; gap: 3rem; margin: 0; padding: 0; }
+        #menu .top-menu li a { font-weight: 500; font-size: 1rem; }
+        #m-menu { display: none; font-size: 28px; cursor: pointer; }
+        #heading-content {
+            background-color: #22252d;
+            background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPjxkZWZzPjxwYXR0ZXJuIGlkPSJhIiB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHBhdHRlcm5Vbml0cz0idXNlclNwYWNlT25Vc2UiIHBhdHRlcm5UcmFuc2Zvcm09InJvdGF0ZSgzMCkiPjxwYXRoIGQ9Ik0zMCA1IEw1NSAzMCBMMzAgNTUgTDUgMzB6IiBmaWxsPSIjMjkyYzM1IiBmaWxsLW9wYWNpdHk9IjAuMSIvPjwvcGF0dGVybj48L2RlZnM+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNhKSIvPjwvc3ZnPg==');
+            background-position: center top;
+            background-repeat: repeat;
+            position: relative;
+            overflow: hidden;
+        }
+        .big-intro-content { display: flex; align-items: flex-start; gap: 3rem; padding: 80px 0 40px; }
+        .bi-left { flex: 1; padding: 60px 0; }
+        .big-intro .heading { font-size: 2.8em; font-weight: 700; margin-bottom: 1.5rem; }
+        .big-intro .description { font-size: 1.2rem; margin-bottom: 2rem; color: #ddd; }
+        .bi-right { width: 50%; position: relative; display: flex; justify-content: center; align-items: center; }
+        /* No image placeholders - removed completely */
+        .big-crop { margin-top: -80px; position: relative; z-index: 2; }
+        .big-crop svg { width:100%; height:auto; display:block; }
+        .section { padding: 5rem 0; position: relative; }
+        .section-safe { background: rgba(0, 0, 0, 0.25); }
+        .content-x { display: flex; align-items: center; gap: 4rem; }
+        .content-x.reverse { flex-direction: row-reverse; }
+        .content-x .text { flex: 1; }
+        .content-x .intro { flex-shrink: 0; width: 40%; display: none; } /* Hide image container completely */
+        .features-list { display: flex; flex-wrap: wrap; margin: -2rem; }
+        .features-list .fl-item {
+            width: calc(33.33% - 4rem);
+            margin: 2rem;
+            background: rgba(255,255,255,0.03);
+            padding: 1.5rem;
+            border-radius: 28px;
+            transition: all 0.25s;
+        }
+        .features-list .fl-item:hover { background: rgba(255,255,255,0.08); transform: translateY(-5px); }
+        .fl-icon { margin-bottom: 1.2rem; }
+        .fl-icon svg { width: 48px; height: 48px; }
+        .fl-title { font-size: 1.3rem; font-weight: 600; margin-bottom: 0.75rem; }
+        .fl-content p { color: #b0b4c2; font-size: 0.95rem; }
+        .section-download { background: #22252e; }
+        .dl-ul { display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap; }
+        .dlu-item {
+            flex: 1; min-width: 260px;
+            background: rgba(255,255,255,0.05);
+            padding: 2rem; border-radius: 2rem;
+            text-align: center; transition: 0.2s;
+        }
+        .dlu-item:hover { background: rgba(255,255,255,0.1); box-shadow: 0 20px 30px rgba(0,0,0,0.2); }
+        .dlu-icon { margin-bottom: 1.5rem; }
+        .dlu-icon svg { width: 70px; height: 70px; }
+        .dlu-item .btn { width: 100%; }
+        .dlu-item.hidden { opacity: 0.5; pointer-events: none; position: relative; }
+        .dlu-item.hidden:before {
+            content: "coming soon";
+            position: absolute; top: 20px; right: 20px;
+            background: #aaa; color: #111;
+            font-size: 12px; padding: 4px 12px; border-radius: 40px;
+        }
+        #footer { background: #15181e; padding: 3rem 0; text-align: center; }
+        .footer-logo img { height: 55px; margin-bottom: 1rem; }
+        .fl-socials { display: flex; justify-content: center; gap: 2rem; margin-top: 1.5rem; }
+        .fbi-icon { font-size: 1.8rem; color: #ccc; transition: 0.2s; }
+        .fbi-icon:hover { color: #7C3AED; }
+        .note { font-size: 0.85rem; color: #aaa; }
+        @media (max-width: 1199px) {
+            #header { height: 80px; }
+            #m-menu { display: block; position: relative; z-index: 20; }
+            #menu {
+                display: none; position: absolute; top: 70px; right: 20px;
+                background: #0f1117; padding: 1rem; border-radius: 1rem;
+                width: 220px; z-index: 100; box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+            }
+            #menu.active { display: block !important; }
+            #menu .top-menu { flex-direction: column; gap: 1rem; text-align: right; }
+            .big-intro-content { flex-direction: column; text-align: center; }
+            .bi-left { padding: 20px 0; }
+            .bi-right { width: 100%; justify-content: center; display: none; } /* Hide empty right column */
+            .content-x { flex-direction: column !important; text-align: center; }
+            .content-x .intro { width: 80%; display: none; }
+            .features-list .fl-item { width: calc(100% - 4rem); display: flex; flex-direction: column; align-items: center; text-align: center; }
+            .dl-ul { flex-direction: column; align-items: center; }
+            .dlu-item { width: 100%; max-width: 400px; }
+        }
+        @media (max-width: 768px) {
+            .heading-2x { font-size: 1.8rem; }
+            .big-intro .heading { font-size: 2rem; }
+            .big-intro .description { font-size: 1rem; }
+            .features-list { margin: -1rem; }
+            .features-list .fl-item { margin: 1rem; width: calc(100% - 2rem); }
+        }
+        .btn-block { display: block; width: 100%; }
+        .mb-4 { margin-bottom: 1.5rem; }
+        .mb-5 { margin-bottom: 3rem; }
+        .mt-4 { margin-top: 1.5rem; }
+        .mt-0 { margin-top: 0; }
+        .my-4 { margin: 1.5rem 0; }
+        .text-center { text-align: center; }
+        .inline { display: inline-block; position: relative; }
+        /* Additional adjustments to remove all image references */
+        .bi-right, .content-x .intro, .img-placeholder, [class*="img-placeholder"] {
+            display: none !important;
+        }
+        .content-x .text {
+            width: 100%;
+            flex: 1 1 100%;
+        }
+        .big-intro-content .bi-left {
+            width: 100%;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        .section .container .content-x {
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+
+<div id="heading-content">
+    <div class="big-intro">
+        <div class="container">
+            <div id="header">
+                <div id="m-menu"><i class="ri-menu-3-line"></i></div>
+                <a href="/" id="logo">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 50" height="50">
+                        <text x="10" y="38" fill="#7C3AED" font-size="34" font-weight="bold" font-family="Montserrat,sans-serif">Anidaku</text>
+                    </svg>
+                </a>
+                <div id="menu">
+                    <ul class="top-menu">
+                        <li><a href="#section-about">About</a></li>
+                        <li><a href="#section-features">Features</a></li>
+                        <li><a href="#section-download">Download</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="big-intro-content">
+                <div class="bi-left">
+                    <h1 class="heading"><span class="highlight">Anidaku</span> - Best Anime App for Android and iOS</h1>
+                    <div class="description">Tired of endless googling for safe and free anime streaming apps? Your search ends right here! Save time for what matters and let us handle the rest, delivering the best streaming experience to you.</div>
+                    <div class="buttons">
+                        <div class="div-relative">
+                            <a href="#section-download" class="btn btn-lg btn-pre"><span>Download Anidaku</span></a>
+                        </div>
+                    </div>
+                    <div class="note mt-4">* Scroll down for previous versions download</div>
+                </div>
+                <!-- bi-right removed entirely - no image section -->
+            </div>
+        </div>
+    </div>
+</div>
+<div class="big-crop">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none" style="width:100%;height:auto;display:block;">
+        <path d="M0,0 L1200,0 L1200,120 L0,120 Z" fill="#1A1D24"/>
+    </svg>
+</div>
+
+<!-- section about - no image -->
+<div class="section section-about" id="section-about">
+    <div class="container">
+        <div class="content-x">
+            <!-- intro image container removed -->
+            <div class="text">
+                <div class="heading-2x text-white">What is <strong class="highlight">Anidaku</strong>?</div>
+                <div class="description">
+                    <p>Anidaku is your ultimate free anime hub, where you can watch and download anime completely free and unlimitedly. With no information required, you can right away jump into your favorite show without any commitment.</p>
+                    <p>There are thousands of titles available on Anidaku and regular updates, making sure your thirst for anime can always be quenched.</p>
+                    <p>Download the app, find your favorite anime, tap play, and let the streaming begin.</p>
+                    <p>No matter what your mood is today, you can always find something to watch. Should you have further requests, don't hesitate to let us know, we are always happy to make sure your time here is your happy hour.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- section features -->
+<div class="section section-features" id="section-features">
+    <div class="container">
+        <div class="heading-2x text-center">Why should you choose <strong class="highlight">Anidaku</strong> for free anime?</div>
+        <div class="features-list">
+
+            <div class="fl-item">
+                <div class="fl-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#7C3AED">
+                        <path d="M12 1C5.93 1 1 5.93 1 12s4.93 11 11 11 11-4.93 11-11S18.07 1 12 1zm0 4a2 2 0 1 1 0 4 2 2 0 0 1 0-4zm3 13H9v-1l1-1v-4l-1-1v-1h4v6l1 1v1z"/>
+                    </svg>
+                </div>
+                <div class="fl-content">
+                    <div class="fl-title">Free without an account</div>
+                    <p>No hidden fees and no risks of identity leakage, enjoy total access to our extensive library of thousands of anime titles.</p>
+                </div>
+            </div>
+
+            <div class="fl-item">
+                <div class="fl-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#7C3AED">
+                        <path d="M20 2H4a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2zm-9 3h2v2h-2V5zm0 4h2v2h-2V9zm-4 0h2v2H7V9zm0 4h2v2H7v-2zm10 4H7v-2h10v2zm0-4h-2v-2h2v2zm0-4h-2V5h2v4z"/>
+                    </svg>
+                </div>
+                <div class="fl-content">
+                    <div class="fl-title">Available in both SUB and DUB</div>
+                    <p>Break all the language barriers, because why not? The world is vast, foreign cultures are enchanting, and our SUB and DUB make sure you can enjoy them without limits.</p>
+                </div>
+            </div>
+
+            <div class="fl-item">
+                <div class="fl-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#7C3AED">
+                        <path d="M4 6H2v14a2 2 0 0 0 2 2h14v-2H4V6zm16-4H8a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2zm-1 9h-4v4h-2v-4H9V9h4V5h2v4h4v2z"/>
+                    </svg>
+                </div>
+                <div class="fl-content">
+                    <div class="fl-title">No Buffering Streaming</div>
+                    <p>Enjoy a seamless watching experience, and don't let any buffering or lagging ruin your mood. Leave all interruptions in the past.</p>
+                </div>
+            </div>
+
+            <div class="fl-item">
+                <div class="fl-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#7C3AED">
+                        <path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm1 17.93V18a1 1 0 0 0-2 0v1.93A8 8 0 0 1 4.07 13H6a1 1 0 0 0 0-2H4.07A8 8 0 0 1 11 4.07V6a1 1 0 0 0 2 0V4.07A8 8 0 0 1 19.93 11H18a1 1 0 0 0 0 2h1.93A8 8 0 0 1 13 19.93zM12 9a3 3 0 1 0 3 3 3 3 0 0 0-3-3z"/>
+                    </svg>
+                </div>
+                <div class="fl-content">
+                    <div class="fl-title">Latest daily updates</div>
+                    <p>Anidaku is among the safest anime apps you can find. We understand watching anime should be a thrill, not a bungee jump – you deserve safety.</p>
+                </div>
+            </div>
+
+            <div class="fl-item">
+                <div class="fl-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#7C3AED">
+                        <path d="M4 6.5C4 5.1 5.1 4 6.5 4h11C18.9 4 20 5.1 20 6.5v11c0 1.4-1.1 2.5-2.5 2.5h-11C5.1 20 4 18.9 4 17.5v-11zM10 8.5v7l5.5-3.5L10 8.5z"/>
+                    </svg>
+                </div>
+                <div class="fl-content">
+                    <div class="fl-title">Fast &amp; HD Streaming</div>
+                    <p>Crystal clear HD quality with lightning-fast load times. Enjoy your anime in the best resolution without any compromise.</p>
+                </div>
+            </div>
+
+            <div class="fl-item">
+                <div class="fl-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#7C3AED">
+                        <path d="M16.5 3c-1.74 0-3.41.81-4.5 2.09C10.91 3.81 9.24 3 7.5 3 4.42 3 2 5.42 2 8.5c0 3.78 3.4 6.86 8.55 11.54L12 21.35l1.45-1.32C18.6 15.36 22 12.28 22 8.5 22 5.42 19.58 3 16.5 3zm-4.4 15.55l-.1.1-.1-.1C7.14 14.24 4 11.39 4 8.5 4 6.5 5.5 5 7.5 5c1.54 0 3.04.99 3.57 2.36h1.87C13.46 5.99 14.96 5 16.5 5c2 0 3.5 1.5 3.5 3.5 0 2.89-3.14 5.74-7.9 10.05z"/>
+                    </svg>
+                </div>
+                <div class="fl-content">
+                    <div class="fl-title">Custom favorite list</div>
+                    <p>Keep track of your favorite anime. Time will pass, but your love might stand the test. Rewatch or share with people you care about later.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<!-- safety section - no image -->
+<div class="section section-safe">
+    <div class="container">
+        <div class="content-x reverse">
+            <!-- safety image container removed -->
+            <div class="text">
+                <div class="heading-2x text-white">Is <strong class="highlight">Anidaku</strong> app safe?</div>
+                <div class="description">
+                    <p>Completely. Anidaku is among the safest anime apps you can find on the Internet. We understand watching anime should be a thrill, not a bungee jump – you deserve to immerse yourself without worrying about safety.</p>
+                    <p>No malware, no data harvesting, just pure anime joy. Our platform is built with user security as top priority.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- download section -->
+<div class="section section-download" id="section-download">
+    <div class="container">
+        <div class="heading-2x text-center mb-3">Download Anidaku</div>
+        <div class="heading-desc text-center mb-5">Just take care of the Anidaku &amp; leave the rest to us.</div>
+        <div class="download-list">
+            <div class="dl-ul">
+
+                <!-- Android - AVAILABLE -->
+                <div class="dlu-item">
+                    <div class="dlu-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="70" height="70">
+                            <path fill="#7C3AED" d="M12.3 29.9C12.3 31 13.2 32 14.4 32h1.6v5.5c0 1.4 1.1 2.5 2.5 2.5s2.5-1.1 2.5-2.5V32h7v5.5c0 1.4 1.1 2.5 2.5 2.5s2.5-1.1 2.5-2.5V32h1.6c1.2 0 2.1-1 2.1-2.1V18H12.3v11.9zM8.5 18C7.1 18 6 19.1 6 20.5v10c0 1.4 1.1 2.5 2.5 2.5S11 31.9 11 30.5v-10C11 19.1 9.9 18 8.5 18zM39.5 18c-1.4 0-2.5 1.1-2.5 2.5v10c0 1.4 1.1 2.5 2.5 2.5S42 31.9 42 30.5v-10c0-1.4-1.1-2.5-2.5-2.5zM30.1 8.2l2.1-2.1c.4-.4.4-1 0-1.4s-1-.4-1.4 0l-2.4 2.4C27.2 6.4 25.7 6 24 6s-3.2.4-4.4 1.1l-2.4-2.4c-.4-.4-1-.4-1.4 0s-.4 1 0 1.4l2.1 2.1C16.1 9.7 14.4 12 14.3 16h19.4c-.1-4-1.8-6.3-3.6-7.8zM20.5 13h-2v-2h2v2zm9 0h-2v-2h2v2z"/>
+                        </svg>
+                    </div>
+                    <div class="dlu-title" style="font-size:1.1rem;font-weight:600;margin-bottom:1rem;">Android</div>
+                    <div class="dlu-detail">
+                        <div class="dlu-btn mb-4">
+                            <a class="btn btn-lg btn-radius btn-block btn-pre" href="https://github.com/raihanbhaii/anidaku-apk/releases/download/production/app-release.apk">
+                                <div class="item-flex center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 48 48" fill="currentColor" style="flex-shrink:0;">
+                                        <path d="M12.3 29.9C12.3 31 13.2 32 14.4 32h1.6v5.5c0 1.4 1.1 2.5 2.5 2.5s2.5-1.1 2.5-2.5V32h7v5.5c0 1.4 1.1 2.5 2.5 2.5s2.5-1.1 2.5-2.5V32h1.6c1.2 0 2.1-1 2.1-2.1V18H12.3v11.9zM8.5 18C7.1 18 6 19.1 6 20.5v10c0 1.4 1.1 2.5 2.5 2.5S11 31.9 11 30.5v-10C11 19.1 9.9 18 8.5 18zM39.5 18c-1.4 0-2.5 1.1-2.5 2.5v10c0 1.4 1.1 2.5 2.5 2.5S42 31.9 42 30.5v-10c0-1.4-1.1-2.5-2.5-2.5zM30.1 8.2l2.1-2.1c.4-.4.4-1 0-1.4s-1-.4-1.4 0l-2.4 2.4C27.2 6.4 25.7 6 24 6s-3.2.4-4.4 1.1l-2.4-2.4c-.4-.4-1-.4-1.4 0s-.4 1 0 1.4l2.1 2.1C16.1 9.7 14.4 12 14.3 16h19.4c-.1-4-1.8-6.3-3.6-7.8zM20.5 13h-2v-2h2v2zm9 0h-2v-2h2v2z"/>
+                                    </svg>
+                                    <span>Download for Android</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Android TV - COMING SOON -->
+                <div class="dlu-item hidden">
+                    <div class="dlu-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="70" height="70">
+                            <path fill="#999" d="M42 8H6C4.9 8 4 8.9 4 10v26c0 1.1.9 2 2 2h15v2h-4v2h14v-2h-4v-2h15c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm0 26H6V10h36v24z"/>
+                        </svg>
+                    </div>
+                    <div class="dlu-title" style="font-size:1.1rem;font-weight:600;margin-bottom:1rem;">Android TV</div>
+                    <div class="dlu-detail">
+                        <div class="dlu-btn mb-4">
+                            <button class="btn btn-lg btn-radius btn-block btn-pre" disabled>
+                                <div class="item-flex center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 48 48" fill="currentColor" style="flex-shrink:0;">
+                                        <path d="M42 8H6C4.9 8 4 8.9 4 10v26c0 1.1.9 2 2 2h15v2h-4v2h14v-2h-4v-2h15c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm0 26H6V10h36v24z"/>
+                                    </svg>
+                                    <span>Coming Soon</span>
+                                </div>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- iOS - COMING SOON -->
+                <div class="dlu-item hidden">
+                    <div class="dlu-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="70" height="70">
+                            <path fill="#999" d="M35.1 25.9c0-4.3 3.5-6.4 3.7-6.5-2-3-5.1-3.4-6.2-3.4-2.6-.3-5.2 1.6-6.5 1.6-1.4 0-3.4-1.5-5.6-1.5-2.9 0-5.5 1.7-7 4.3-3 5.2-.8 12.9 2.1 17.1 1.4 2 3.1 4.3 5.3 4.2 2.1-.1 2.9-1.4 5.5-1.4 2.5 0 3.3 1.4 5.5 1.3 2.3 0 3.7-2 5.1-4 1.6-2.3 2.3-4.5 2.3-4.6-.1-.1-4.2-1.6-4.2-7.1zM30.8 13c1.2-1.4 1.9-3.4 1.7-5.3-1.7.1-3.7 1.1-4.9 2.5-1.1 1.2-2 3.2-1.7 5 1.8.1 3.7-.9 4.9-2.2z"/>
+                        </svg>
+                    </div>
+                    <div class="dlu-title" style="font-size:1.1rem;font-weight:600;margin-bottom:1rem;">iOS</div>
+                    <div class="dlu-detail">
+                        <div class="dlu-btn mb-4">
+                            <button class="btn btn-lg btn-radius btn-block btn-pre" disabled>
+                                <div class="item-flex center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 48 48" fill="currentColor" style="flex-shrink:0;">
+                                        <path d="M35.1 25.9c0-4.3 3.5-6.4 3.7-6.5-2-3-5.1-3.4-6.2-3.4-2.6-.3-5.2 1.6-6.5 1.6-1.4 0-3.4-1.5-5.6-1.5-2.9 0-5.5 1.7-7 4.3-3 5.2-.8 12.9 2.1 17.1 1.4 2 3.1 4.3 5.3 4.2 2.1-.1 2.9-1.4 5.5-1.4 2.5 0 3.3 1.4 5.5 1.3 2.3 0 3.7-2 5.1-4 1.6-2.3 2.3-4.5 2.3-4.6-.1-.1-4.2-1.6-4.2-7.1zM30.8 13c1.2-1.4 1.9-3.4 1.7-5.3-1.7.1-3.7 1.1-4.9 2.5-1.1 1.2-2 3.2-1.7 5 1.8.1 3.7-.9 4.9-2.2z"/>
+                                    </svg>
+                                    <span>Coming Soon</span>
+                                </div>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- footer -->
+<div id="footer">
+    <div class="container">
+        <div class="footer-logo">
+            <a href="/" class="footer-logo mb-4">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 50" height="55">
+                    <text x="10" y="38" fill="#7C3AED" font-size="30" font-weight="bold" font-family="Montserrat,sans-serif">Anidaku</text>
+                </svg>
+            </a>
+            <div class="block desc mb-4">Anidaku - Watch free movies &amp; TV shows online in HD on any device</div>
+            <div class="fl-socials my-4">
+                <a href="#" class="fbi-icon"><i class="ri-twitter-line"></i></a>
+                <a href="https://t.me/+0Y-rp270I4Y1NmU9" class="fbi-icon"><i class="ri-telegram-line"></i></a>
+            </div>
+            <div class="note mt-3">© 2025 Anidaku. All rights reserved.</div>
+        </div>
+    </div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+<script>
+    document.getElementById('m-menu')?.addEventListener('click', function(e) {
+        const menu = document.getElementById('menu');
+        menu.classList.toggle('active');
+        this.classList.toggle('active');
+    });
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            const target = document.querySelector(this.getAttribute('href'));
+            if(target) {
+                e.preventDefault();
+                target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                if(window.innerWidth <= 1199) document.getElementById('menu')?.classList.remove('active');
+            }
+        });
+    });
+</script>
+</body>
+</html>
